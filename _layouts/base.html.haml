@@ -1,0 +1,25 @@
+!!!
+%html
+  %head
+    %title
+      #{site.title}: #{page.title}
+    %link{ :rel=>'stylesheet', :type=>'text/css', :href=>'/stylesheets/screen.css', :media=>'screen, projection' }
+    %link{ :rel=>'alternate',  :type=>'application/atom+xml', :href=>'/posts.atom' }
+  %body.bp
+    #wrapper
+      #header
+        %h1
+          %a(href = '/')ideas.each &:post
+      #content-wrapper   
+        ~ content
+      #footer
+        .license
+          %a(rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/")
+            %img(alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png")
+          Contents and source licensed under a 
+          %a(rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/")
+            Creative Commons Attribution-ShareAlike 3.0 License
+        .powered_by
+          Powered by 
+          %a(href='http://awestruct.org/')awestruct
+  = google_analytics

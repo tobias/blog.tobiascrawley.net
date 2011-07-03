@@ -1,0 +1,17 @@
+profiles:
+  development:
+  staging:
+    base_url: http://staging.blog.tobiascrawley.net/
+    deploy:
+      host: tcrawley@blog.tobiascrawley.net
+      path: /home/tcrawley/staging.blog.tobiascrawley.net/
+  production:
+    base_url: http://blog.tobiascrawley.net/
+    deploy:
+      host: blog.tobiascrawley.net
+      path: /home/tcrawley/blah/
+title: "ideas.each &:post"
+
+disqus: tobiasblog
+google_analytics:    UA-762505-1
+interpolate: false

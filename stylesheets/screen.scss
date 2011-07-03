@@ -1,0 +1,279 @@
+
+@import "blueprint/reset";
+@import "partials/base";
+@import "blueprint";
+@import "blueprint/scaffolding";
+@import "compass/typography/lists";
+@import "compass/css3/border-radius";
+
+// To generate css equivalent to the blueprint css but with your
+// configuration applied, uncomment:
+// @include blueprint
+
+// But Compass recommends that you scope your blueprint styles
+// So that you can better control what pages use blueprint
+// when stylesheets are concatenated together.
+//@include blueprint-scaffolding;
+
+body.bp {
+    @include blueprint-typography(true);
+    @include blueprint-utilities;
+    @include blueprint-debug;
+    @include blueprint-interaction;
+}
+
+form.bp {
+    @include blueprint-form;
+}
+
+body.bp {
+    color: $dark_color;
+    #wrapper {
+        margin: 0 50px;
+    }
+    #header {
+        padding-top: 30px;
+        h1 {
+            font-size: 2.2em;
+            font-family: Courier, courier, fixed-width;
+            margin-bottom: 4px;
+            a {
+                text-decoration: none;
+            }
+        }
+        border-bottom: 3px solid $bright_color;
+        margin-bottom: 30px;
+    }
+}
+
+#content-wrapper {
+  @include clearfix;
+}
+
+#columns {
+    padding-right: 330px;
+
+    #left-column {
+      float: left;
+    }
+    #right-column {
+      float: right;
+      width: 300px;
+      margin-right: -330px;
+    }
+}
+
+
+
+
+#primary-container {
+    h1.page-title {
+        font-size: 220%;
+        font-weight: bold;
+        color: $page_title_color;
+        margin-bottom: 1ex;
+        padding-bottom: .5ex;
+        a {
+            text-decoration: none;
+        }
+    }
+    h1 {
+        font-size: 140%;
+        font-weight: bold;
+        color: $header_color - #222;
+    }
+    h2 {
+        font-size: 120%;
+        font-weight: bold;
+        color: $header_color - #111;
+    }
+    h3 {
+        font-size: 100%;
+        font-weight: bold;
+    }
+    pre {
+        font-size: 90%;
+        code {
+            display: block;
+            padding: 1em;
+            border: 1px dotted $code_border_color;
+            overflow-x: auto;
+        }
+    }
+    p {
+        margin-bottom: 1em;
+    }
+
+    ul {
+        padding-left: 2em;
+        list-style-type: square;
+    }
+}
+
+.post-navigation {
+    line-height: 1.4em;
+    margin-bottom: 2em;
+    .next, .previous {
+        color: $post_nav_color;
+        margin-bottom: 1em;
+        .label {
+            font-weight: bold;
+        }
+        a {
+            display: block;
+            text-decoration: none;
+            padding: 0px;
+        }
+    }
+}
+
+.post {
+    margin-bottom: 1em;
+    border-bottom: 1px solid $post_border_color;
+    line-height: 1.5em;
+    h1.title {
+        font-size: 2em;
+        font-weight: bold;
+        margin-bottom: .5ex;
+        a {
+            text-decoration: none;
+        }
+    }
+    .byline {
+        margin-bottom: 2em;
+        margin-left: 1ex;
+        span.label {
+            font-style: italic;
+        }
+        .date {
+            span.value {
+                font-weight: bold;
+            }
+        }
+        .tags {
+            a {
+                font-weight: bold;
+                text-decoration: none;
+            }
+        }
+    }
+    .body {
+        margin-bottom: 2em;
+        font-size: 1.2em;
+    }
+    .code, code pre {
+        display: block;
+        padding: 1em;
+        border: 1px dotted $code_border_color;
+        overflow-x: auto;
+    }
+    .comments {
+        border-top: 1px solid $post_comments_border_color;
+        margin-bottom: 2em;
+    }
+    .tail {
+        background-color: $post_tail_background_color;
+        border: 1px solid $post_tail_border_color;
+        padding: .8ex;
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+}
+
+#error-404 {
+    @include prepend(4);
+    @include column(16);
+    @include append(4);
+    font-size: 200%;
+}
+
+form {
+    label {
+        display: block;
+    }
+}
+
+.bp {
+    .pagination-links {
+        margin-bottom: 1em;
+        a {
+            text-decoration: none;
+        }
+        a, .current-page, .slip {
+            padding: .5ex;
+            margin-right: .5ex;
+        }
+        a.page-link, .current-page, .previous-link, .next-link {
+            border: 1px solid $pagination_border_color;
+        }
+        .current-page {
+            font-weight: bold;
+        }
+    }
+}
+
+
+div.gist {
+    margin: 2em 0;
+}
+
+.tag-cloud {
+    margin: auto;
+    text-align: justify;
+
+    .tag {
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .tag-0 {
+        font-size: 110%;
+    }
+
+    .tag-1 {
+        font-size: 125%;
+    }
+
+    .tag-2 {
+        font-size: 140%;
+    }
+
+    .tag-3 {
+        font-size: 155%;
+    }
+
+    .tag-4 {
+        font-size: 170%;
+    }
+
+    .tag-5 {
+        font-size: 185%;
+    }
+
+    .tag-6 {
+        font-size: 200%;
+    }
+
+    .tag-7 {
+        font-size: 215%;
+    }
+
+    .tag-8 {
+        font-size: 230%;
+    }
+
+    .tag-9 {
+        font-size: 245%;
+    }
+
+    .tag-10 {
+        font-size: 250%;
+    }
+
+    .tag-11 {
+        font-size: 250%;
+    }
+
+}
+

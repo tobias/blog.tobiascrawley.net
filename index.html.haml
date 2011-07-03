@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+- page.posts.each do |post|
+  .post
+    %h2
+      %a{:href => post.url}
+        = post.title
+    .byline
+      .author
+        = post.author
+      .date
+        = post.date.strftime('%d %b %Y')
+      .tags
+        - post.tags.each do |tag|
+          %a{:href=>tag.primary_page.url}
+            = tag
+    .body
+      ~ post.content
+    .comments
+      = post.disqus_comments_link
+
+= page.posts.links
