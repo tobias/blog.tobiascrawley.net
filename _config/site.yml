@@ -9,7 +9,7 @@ profiles:
     base_url: http://blog.tobiascrawley.net/
     deploy:
       host: blog.tobiascrawley.net
-      path: /home/tcrawley/blah/
+      path: /home/tcrawley/blog.tobiascrawley.net/
 title: "ideas.each(&:post)"
 
 disqus: tobiasblog
