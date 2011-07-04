@@ -26,7 +26,7 @@ It is a gem that provides support for running commands on remote server. Once se
 <p>Here is the output of <code>remote usage</code>:</p>
 
 
-<div class="wp_syntax"><div class="code"><pre class="html" style="font-family:monospace;">Executes commands on a remote server over ssh. Configuration is in:
+<div class="wp_syntax"><div class="code"><pre class="html" style="">Executes commands on a remote server over ssh. Configuration is in:
 /Users/tobias/customers/DealerIgnition/dealer_ignition/script/../config/server_remote.yml
 &nbsp;
 You can override the profile used with -p profile. The default profile is: app
@@ -62,7 +62,7 @@ For help on a particular command, use 'remote help COMMAND'.</pre></div></div>
 
 
 
-<pre>
+<pre style="">
 sudo gem install tobias-server_remote --source http://gems.github.com/
 server_remotify path_to_app
 </pre>				

@@ -17,7 +17,7 @@ disqus_identifier: "288 http://blog.tobiascrawley.net/?p=288"
 
 
 
-<pre>
+<pre style="">
 rake aborted!
 can't activate , already activated json-1.1.9
 </pre>
@@ -28,7 +28,7 @@ can't activate , already activated json-1.1.9
 
 
 
-<pre>
+<pre style="">
 &gt;&gt; Rails::GemDependency.from_directory_name('vendor/gems/gem_name-0.1.0', false).refresh
 </pre>
 

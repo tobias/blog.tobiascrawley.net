@@ -21,12 +21,12 @@ disqus_identifier: "132 http://blog.tobiascrawley.net/?p=132"
 <span id="more-132"></span></p>
 
 
-<div class="wp_syntax"><div class="code"><pre class="ruby" style="font-family:monospace;">family.<span style="color:#9900CC;">children</span> <span style="color:#006600; font-weight:bold;">&lt;&lt;</span> Child.<span style="color:#9900CC;">new</span><span style="color:#006600; font-weight:bold;">(</span> <span style="color:#ff3333; font-weight:bold;">:name</span> <span style="color:#006600; font-weight:bold;">=&gt;</span> <span style="color:#996600;">'Leif Everett Crawley'</span>,
-<span style="color:#ff3333; font-weight:bold;">:gender</span> <span style="color:#006600; font-weight:bold;">=&gt;</span> <span style="color:#ff3333; font-weight:bold;">:male</span>,
-<span style="color:#ff3333; font-weight:bold;">:weight</span> <span style="color:#006600; font-weight:bold;">=&gt;</span> 8.<span style="color:#9900CC;">pounds</span> <span style="color:#006600; font-weight:bold;">+</span> 14.<span style="color:#9900CC;">ounces</span>,
-<span style="color:#ff3333; font-weight:bold;">:height</span> <span style="color:#006600; font-weight:bold;">=&gt;</span> 20.5.<span style="color:#9900CC;">inches</span>,
-<span style="color:#ff3333; font-weight:bold;">:born_at</span> <span style="color:#006600; font-weight:bold;">=&gt;</span> <span style="color:#996600;">'Thu Feb 19 09:36:19 EST 2009'</span>,
-<span style="color:#ff3333; font-weight:bold;">:birth_location</span> <span style="color:#006600; font-weight:bold;">=&gt;</span> <span style="color:#ff3333; font-weight:bold;">:home</span> <span style="color:#006600; font-weight:bold;">)</span></pre></div></div>
+<div class="wp_syntax"><div class="code"><pre class="ruby" style="">family.<span style="color:#9900CC;">children</span> <span style="color:#006600; font-weight:bold;">&lt;&lt;</span> Child.<span style="color:#9900CC;">new</span><span style="color:#006600; font-weight:bold;">(</span> <span style="color:#ff3333; font-weight:bold;">:name</span> <span style="color:#006600; font-weight:bold;">=&gt;</span> <span style="color:#996600;">'Leif Everett Crawley'</span>,
+                              <span style="color:#ff3333; font-weight:bold;">:gender</span> <span style="color:#006600; font-weight:bold;">=&gt;</span> <span style="color:#ff3333; font-weight:bold;">:male</span>,
+                              <span style="color:#ff3333; font-weight:bold;">:weight</span> <span style="color:#006600; font-weight:bold;">=&gt;</span> 8.<span style="color:#9900CC;">pounds</span> <span style="color:#006600; font-weight:bold;">+</span> 14.<span style="color:#9900CC;">ounces</span>,
+                              <span style="color:#ff3333; font-weight:bold;">:height</span> <span style="color:#006600; font-weight:bold;">=&gt;</span> 20.5.<span style="color:#9900CC;">inches</span>,
+                              <span style="color:#ff3333; font-weight:bold;">:born_at</span> <span style="color:#006600; font-weight:bold;">=&gt;</span> <span style="color:#996600;">'Thu Feb 19 09:36:19 EST 2009'</span>,
+                              <span style="color:#ff3333; font-weight:bold;">:birth_location</span> <span style="color:#006600; font-weight:bold;">=&gt;</span> <span style="color:#ff3333; font-weight:bold;">:home</span> <span style="color:#006600; font-weight:bold;">)</span></pre></div></div>
 
 
 

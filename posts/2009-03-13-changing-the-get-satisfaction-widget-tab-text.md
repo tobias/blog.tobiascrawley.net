@@ -25,11 +25,9 @@ disqus_identifier: "155 http://blog.tobiascrawley.net/?p=155"
 
 
 
-<pre code="css">
-body a#fdbk_tab {
-background-image: url(/path/to/support_trans_tab.png);
-}
-</pre>				
+<pre code="css" style="">body a#fdbk_tab {
+    background-image: url(/path/to/support_trans_tab.png);
+}</pre>				
 
 
 <!-- end .postmetadata -->

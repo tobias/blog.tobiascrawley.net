@@ -16,7 +16,7 @@ disqus_identifier: "150 http://blog.tobiascrawley.net/?p=150"
 <p>When using ruby&#x2019;s <code>method_missing</code>, don&#x2019;t alter the <code>method</code> parameter before calling <code>super</code> (you are calling <code>super</code>, aren&#x2019;t you?). Otherwise, you will get a very clear exception:</p>
 
 
-<div class="wp_syntax"><div class="code"><pre class="ruby" style="font-family:monospace;">  <span style="color:#CC00FF; font-weight:bold;">ArgumentError</span>: no id given</pre></div></div>
+<div class="wp_syntax"><div class="code"><pre class="ruby" style="">  <span style="color:#CC00FF; font-weight:bold;">ArgumentError</span>: no id given</pre></div></div>
 
 
 

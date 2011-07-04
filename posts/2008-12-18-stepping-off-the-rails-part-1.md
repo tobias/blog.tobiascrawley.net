@@ -1,5 +1,5 @@
 ---
-title: "Stepping off the Rails – adventures with Sinatra (Part 1)"
+title: "Stepping off the Rails - adventures with Sinatra (Part 1)"
 author: Toby Crawley
 layout: post
 tags: [rails, ruby, sinatra]
@@ -26,7 +26,7 @@ disqus_identifier: "3 http://blog.handbuiltsoftware.com/?p=3"
 <p>Sinatra apps are based around one controller file. You can break out your controller actions into separate files, but will need to manually require them into the primary controller. For this app, the controller is <a href="http://github.com/tobias/url_unwind/tree/master/urlunwind.rb">urlunwind.rb</a>. Right now, we are just interested in the actions:</p>
 
 
-<div class="wp_syntax"><div class="code"><pre class="ruby" style="font-family:monospace;">get <span style="color:#996600;">'/'</span> <span style="color:#9966CC; font-weight:bold;">do</span>
+<div class="wp_syntax"><div class="code"><pre class="ruby" style="">get <span style="color:#996600;">'/'</span> <span style="color:#9966CC; font-weight:bold;">do</span>
 haml <span style="color:#ff3333; font-weight:bold;">:index</span>
 <span style="color:#9966CC; font-weight:bold;">end</span>
 &nbsp;
@@ -71,7 +71,7 @@ sass <span style="color:#ff3333; font-weight:bold;">:style</span>
 <p>Sinatra provides helpers for Test::Unit, Test::Spec, and RSpec. Here is a snippet from my Test::Unit <a href="http://github.com/tobias/url_unwind/tree/master/test/urlunwind_test.rb">tests</a>:</p>
 
 
-<div class="wp_syntax"><div class="code"><pre class="ruby" style="font-family:monospace;"> <span style="color:#9966CC; font-weight:bold;">def</span> test_index
+<div class="wp_syntax"><div class="code"><pre class="ruby" style=""> <span style="color:#9966CC; font-weight:bold;">def</span> test_index
 get_it <span style="color:#996600;">'/'</span>
 assert_match <span style="color:#006600; font-weight:bold;">/</span>Unwind It<span style="color:#006600; font-weight:bold;">/</span>, <span style="color:#0066ff; font-weight:bold;">@response</span>.<span style="color:#9900CC;">body</span>
 <span style="color:#9966CC; font-weight:bold;">end</span>

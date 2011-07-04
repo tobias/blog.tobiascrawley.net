@@ -9,17 +9,19 @@
     #wrapper
       #header
         %h1
-          %a(href = '/')ideas.each &:post
+          %a(href = '/')ideas.each(&:post)
+        #feed
+          %a(href='/posts.atom')
+            %img(src='/feed.png' alt='[atom feed]')
       #content-wrapper   
         ~ content
       #footer
         .license
           %a(rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/")
             %img(alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png")
-          Contents and source licensed under a 
-          %a(rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/")
-            Creative Commons Attribution-ShareAlike 3.0 License
-        .powered_by
-          Powered by 
-          %a(href='http://awestruct.org/')awestruct
+        .powered-by
+          .text
+            Powered by 
+          %a(href='http://awestruct.org/')
+            %img(src='http://awestruct.org/images/logo.png')
   = google_analytics

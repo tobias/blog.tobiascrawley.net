@@ -1,5 +1,5 @@
 ---
-title: "server_remote – A Rails plugin for easily accessing servers"
+title: "server_remote - A Rails plugin for easily accessing servers"
 author: Toby Crawley
 layout: post
 tags: [deployment, rails, ruby, simplecli]
@@ -26,7 +26,7 @@ I just released <a href="http://github.com/tobias/server_remote">server_remote</
 <p>Here is the output of <code>remote usage</code>:</p>
 
 
-<div class="wp_syntax"><div class="code"><pre class="html" style="font-family:monospace;"> Executes commands on a remote server over ssh. Configuration is in:
+<div class="wp_syntax"><div class="code"><pre class="html" style=""> Executes commands on a remote server over ssh. Configuration is in:
 /Users/tobias/customers/DropZite/restaurantZite/config/server_remote.yml
 &nbsp;
 You can override the profile used with -p profile. The default profile is: app

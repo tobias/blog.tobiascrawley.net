@@ -19,7 +19,7 @@ disqus_identifier: "227 http://blog.tobiascrawley.net/?p=227"
 
 
 
-<pre>
+<pre style="">
 &gt;&gt; Rails.environment       # a convenience alias to Rails.env
 =&gt; "development"
 &gt;&gt; Rails.development?

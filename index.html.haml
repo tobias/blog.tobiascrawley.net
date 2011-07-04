@@ -4,21 +4,26 @@ layout: default
 
 - page.posts.each do |post|
   .post
-    %h2
+    %h1.title
       %a{:href => post.url}
         = post.title
     .byline
-      .author
-        = post.author
       .date
-        = post.date.strftime('%d %b %Y')
+        %span.label
+          Posted:
+        %span.value           
+          = post.date.strftime('%A %B %e, %Y')
       .tags
+        %span.label
+          Tags:&nbsp; 
         - post.tags.each do |tag|
-          %a{:href=>tag.primary_page.url}
+          %a{:href=>tag.primary_page.url}><
             = tag
+          = ',&nbsp;' unless tag == post.tags.last  
     .body
       ~ post.content
-    .comments
+    .comments-link
       = post.disqus_comments_link
 
 = page.posts.links
+= page.disqus_comments_count

@@ -1,5 +1,5 @@
 ---
-title: "Idle hands are the coder’s tools"
+title: "Idle hands are the coder's tools"
 author: Toby Crawley
 layout: post
 tags: [hatfullofnames, testing, urlunwind]

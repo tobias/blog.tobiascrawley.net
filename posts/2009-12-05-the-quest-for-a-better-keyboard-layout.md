@@ -65,7 +65,7 @@ I &#x2018;shift-swapped&#x2019; (meaning the symbol you get with or without the 
 
 
 
-<pre>
+<pre style="">
 Analyzed 457 files, 25060 lines
 ` ~     25     58  2.320
 1 !   1161    713  0.614

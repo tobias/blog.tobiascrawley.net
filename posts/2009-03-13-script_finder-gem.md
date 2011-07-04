@@ -20,7 +20,7 @@ disqus_identifier: "163 http://blog.tobiascrawley.net/?p=163"
 <p>Examples (in a rails app):</p>
 
 
-<pre>
+<pre style="">
 ~/rails_app/app/views$ s c
 --&gt; calling '/Users/tobias/rails_app/script/console'
 Loading development environment (Rails 2.1.0)
@@ -40,7 +40,7 @@ RowsLogger plugin enables mysql
 <p>The gem is not rails specific &#x2013; out of the box it will work with any project that has a <code>script/</code> directory. If you want to make your own version of the <code>s@ script that looks for executables in a different dir (I would save this one as @c</code>):</p>
 
 
-<div class="wp_syntax"><div class="code"><pre class="ruby" style="font-family:monospace;">  <span style="color:#008000; font-style:italic;">#!/usr/bin/env ruby</span>
+<div class="wp_syntax"><div class="code"><pre class="ruby" style="">  <span style="color:#008000; font-style:italic;">#!/usr/bin/env ruby</span>
 &nbsp;
 <span style="color:#CC0066; font-weight:bold;">require</span> <span style="color:#996600;">'script_finder'</span>
 &nbsp;

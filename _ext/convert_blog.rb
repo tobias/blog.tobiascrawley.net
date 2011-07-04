@@ -22,6 +22,11 @@ require 'nokogiri'
       body.css('img').each do |img|
         img['src'] = "/posts/assets/old/#{$1}" if img['src'] =~ /wp-content\/uploads\/\d*\/\d*\/(.*)$/
       end
+
+      # ditch some of the old syntax highligher's style
+      body.css('pre').each do |pre|
+        pre['style'] = ''
+      end
       
       # cleanup
       title_header.unlink

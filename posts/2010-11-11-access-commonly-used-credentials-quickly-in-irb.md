@@ -26,7 +26,7 @@ disqus_identifier: "335 http://blog.tobiascrawley.net/?p=335"
 <p>Now, inside irb, I can access the credentials with:</p>
 
 
-<div class="wp_syntax"><div class="code"><pre class="ruby" style="font-family:monospace;">EC2.<span style="color:#9900CC;">account_a</span>.<span style="color:#9900CC;">access_key_id</span>
+<div class="wp_syntax"><div class="code"><pre class="ruby" style="">EC2.<span style="color:#9900CC;">account_a</span>.<span style="color:#9900CC;">access_key_id</span>
 EC2.<span style="color:#9900CC;">account_b</span>.<span style="color:#9900CC;">secret_access_key</span></pre></div></div>
 
 

@@ -16,7 +16,7 @@ disqus_identifier: "80 http://blog.handbuiltsoftware.com/?p=80"
 <p>I&#x2019;m using <a href="http://webby.rubyforge.org/">Webby</a> to manage the static <a href="http://handbuiltsoftware.com/">Hand Built Software</a> site, and had a difficult time finding how to set defaults for the webby rake tasks (specifically the <code>deploy:ssh</code> task in this case). Here is what I figured out: you set the values at the top of your project <code>Sitefile</code> like so:</p>
 
 
-<div class="wp_syntax"><div class="code"><pre class="ruby" style="font-family:monospace;"><span style="color:#008000; font-style:italic;">#-*-ruby-*-</span>
+<div class="wp_syntax"><div class="code"><pre class="ruby" style=""><span style="color:#008000; font-style:italic;">#-*-ruby-*-</span>
 SITE.<span style="color:#9900CC;">user</span> = <span style="color:#996600;">'tobias'</span>
 SITE.<span style="color:#9900CC;">host</span> = <span style="color:#996600;">'handbuiltsoftware.com'</span>
 SITE.<span style="color:#9900CC;">remote_dir</span> = <span style="color:#996600;">'/path/to/site/'</span>
@@ -34,7 +34,7 @@ task <span style="color:#ff3333; font-weight:bold;">:deploy</span> <span style="
 <p>For reference, here are the webby defaults which can be overridden (from <a href="http://github.com/TwP/webby/tree/master/lib/webby.rb">lib/webby.rb</a>)</p>
 
 
-<div class="wp_syntax"><div class="code"><pre class="ruby" style="font-family:monospace;">  <span style="color:#008000; font-style:italic;"># call-seq:</span>
+<div class="wp_syntax"><div class="code"><pre class="ruby" style="">  <span style="color:#008000; font-style:italic;"># call-seq:</span>
 <span style="color:#008000; font-style:italic;">#    Webby.site    =&gt; struct</span>
 <span style="color:#008000; font-style:italic;">#</span>
 <span style="color:#008000; font-style:italic;"># Returns a struct containing the configuration parameters for the </span>

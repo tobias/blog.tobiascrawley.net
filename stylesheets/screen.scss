@@ -1,19 +1,33 @@
 
 @import "blueprint/reset";
-@import "partials/base";
 @import "blueprint";
 @import "blueprint/scaffolding";
 @import "compass/typography/lists";
 @import "compass/css3/border-radius";
 
-// To generate css equivalent to the blueprint css but with your
-// configuration applied, uncomment:
-// @include blueprint
+$light_color: #fff8e3;
+//#cccc9f
+$dark_color: #33332d;
+//#9fb4cc
+$bright_color: #db4015;
 
-// But Compass recommends that you scope your blueprint styles
-// So that you can better control what pages use blueprint
-// when stylesheets are concatenated together.
-//@include blueprint-scaffolding;
+$post_border_color: $bright_color;
+$code_border_color: #dedede;
+$code_background_color: #f8f9fe;
+
+$post_nav_color: #999;
+$post_date_color: #555;
+$post_comments_border_color: #DDD;
+$post_tail_background_color: #EEE;
+$post_tail_border_color: #BBB;
+
+$pagination_border_color: #999;
+
+$link_color: #09066d;
+$link_visited_color: $link_color;
+$link_hover_color: $bright_color;
+
+$post_padding: 20px;
 
 body.bp {
     @include blueprint-typography(true);
@@ -26,24 +40,70 @@ form.bp {
     @include blueprint-form;
 }
 
+
 body.bp {
     color: $dark_color;
+    a {
+        color: $link_color;
+    }
     #wrapper {
         margin: 0 50px;
     }
     #header {
         padding-top: 30px;
+        border-bottom: 3px solid $bright_color;
+        margin-bottom: 30px;
         h1 {
-            font-size: 2.2em;
+            font-size: 3em;
             font-family: Courier, courier, fixed-width;
             margin-bottom: 4px;
             a {
                 text-decoration: none;
             }
         }
-        border-bottom: 3px solid $bright_color;
-        margin-bottom: 30px;
+        #feed {
+            float: right;
+            margin-top: -20px;
+        }
     }
+    #footer {
+        @include clearfix;
+        border-top: 3px solid $bright_color;
+        margin: 20px 0;
+        padding-top: 10px;
+        .license {
+            float: left;
+        }
+        .powered-by {
+            @include clearfix;
+            float: right;
+            img {
+                height: 30px;
+                float: left;
+                margin-top: -10px;
+            }
+            .text {
+                float: left;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+img.alignleft {
+    float: left;
+    margin: 0 1em 1em 0;
+}
+
+img.alignright {
+    float: right;
+    margin: 0 0 1em 1em;
+}
+
+img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #content-wrapper {
@@ -60,53 +120,10 @@ body.bp {
       float: right;
       width: 300px;
       margin-right: -330px;
-    }
-}
-
-
-
-
-#primary-container {
-    h1.page-title {
-        font-size: 220%;
-        font-weight: bold;
-        color: $page_title_color;
-        margin-bottom: 1ex;
-        padding-bottom: .5ex;
-        a {
-            text-decoration: none;
-        }
-    }
-    h1 {
-        font-size: 140%;
-        font-weight: bold;
-        color: $header_color - #222;
-    }
-    h2 {
-        font-size: 120%;
-        font-weight: bold;
-        color: $header_color - #111;
-    }
-    h3 {
-        font-size: 100%;
-        font-weight: bold;
-    }
-    pre {
-        font-size: 90%;
-        code {
-            display: block;
-            padding: 1em;
-            border: 1px dotted $code_border_color;
-            overflow-x: auto;
-        }
-    }
-    p {
-        margin-bottom: 1em;
-    }
-
-    ul {
-        padding-left: 2em;
-        list-style-type: square;
+      h3 {
+          border-bottom: 1px solid $bright_color;
+          margin-bottom: 0.5em;
+      }
     }
 }
 
@@ -129,28 +146,31 @@ body.bp {
 
 .post {
     margin-bottom: 1em;
-    border-bottom: 1px solid $post_border_color;
+    padding-bottom: 1em;
     line-height: 1.5em;
     h1.title {
         font-size: 2em;
         font-weight: bold;
         margin-bottom: .5ex;
+        border-bottom: 2px solid $post_border_color;
         a {
             text-decoration: none;
         }
     }
     .byline {
-        margin-bottom: 2em;
-        margin-left: 1ex;
+        @include clearfix;
+        margin-bottom: 1em;
         span.label {
             font-style: italic;
         }
         .date {
+            float: left;
             span.value {
                 font-weight: bold;
             }
         }
         .tags {
+            float: right;
             a {
                 font-weight: bold;
                 text-decoration: none;
@@ -158,14 +178,25 @@ body.bp {
         }
     }
     .body {
-        margin-bottom: 2em;
-        font-size: 1.2em;
+        @include clearfix;
+        margin-bottom: 1em;
+        line-height: 1.5em;
+        padding-left: $post_padding;
+        h1, h2, h3, h4 {
+            border-bottom: 1px solid $code_border_color;
+            margin-left: -$post_padding;
+        }
     }
-    .code, code pre {
+    .comments-link {
+        font-weight: bold;
+    }
+    pre {
         display: block;
-        padding: 1em;
-        border: 1px dotted $code_border_color;
+        padding: 0.5em;
+        border: 1px solid $code_border_color;
+        background-color: $code_background_color;
         overflow-x: auto;
+        margin: 1.5em;
     }
     .comments {
         border-top: 1px solid $post_comments_border_color;
@@ -276,4 +307,5 @@ div.gist {
     }
 
 }
+
 

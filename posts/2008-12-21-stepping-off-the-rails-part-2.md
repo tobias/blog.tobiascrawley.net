@@ -1,5 +1,5 @@
 ---
-title: "Stepping off the Rails – adventures with Sinatra (Part 2)"
+title: "Stepping off the Rails - adventures with Sinatra (Part 2)"
 author: Toby Crawley
 layout: post
 tags: [deployment, dreamhost, passenger, ruby, sinatra, urlunwind]
@@ -26,7 +26,7 @@ disqus_identifier: "54 http://blog.handbuiltsoftware.com/?p=54"
 <p>To configure the application to run on rack under Passenger, you need to define a rack configuration file. Passenger expects that file to be named <code>config.ru</code> (see <a href="http://www.modrails.com/documentation/Users%20guide.html#_deploying_a_rack_based_ruby_application">Deploying a Rack-based Ruby application</a> in the Passenger documentation). Here is a minimum <code>config.ru</code> to run the application:</p>
 
 
-<div class="wp_syntax"><div class="code"><pre class="ruby" style="font-family:monospace;"><span style="color:#CC0066; font-weight:bold;">require</span> <span style="color:#996600;">'rubygems'</span>
+<div class="wp_syntax"><div class="code"><pre class="ruby" style=""><span style="color:#CC0066; font-weight:bold;">require</span> <span style="color:#996600;">'rubygems'</span>
 <span style="color:#CC0066; font-weight:bold;">require</span> <span style="color:#996600;">'sinatra'</span>
 &nbsp;
 disable <span style="color:#ff3333; font-weight:bold;">:run</span>
@@ -46,7 +46,7 @@ run Sinatra.<span style="color:#9900CC;">application</span></pre></div></div>
 This is because rack by default sets its base directory to be the path to the called executable (and on my machine, <code>rackup</code> lives in <code>/opt/local/bin/</code>). So we&#x2019;ll need to explicitly set the paths:</p>
 
 
-<div class="wp_syntax"><div class="code"><pre class="ruby" style="font-family:monospace;"><span style="color:#CC0066; font-weight:bold;">require</span> <span style="color:#996600;">'rubygems'</span>
+<div class="wp_syntax"><div class="code"><pre class="ruby" style=""><span style="color:#CC0066; font-weight:bold;">require</span> <span style="color:#996600;">'rubygems'</span>
 <span style="color:#CC0066; font-weight:bold;">require</span> <span style="color:#996600;">'sinatra'</span>
 &nbsp;
 disable <span style="color:#ff3333; font-weight:bold;">:run</span>
@@ -67,7 +67,7 @@ run Sinatra.<span style="color:#9900CC;">application</span></pre></div></div>
 <p>Sinatra uses rack&#x2019;s built in logging to log requests, and these log messages get printed to standard out. It would be nice to log these to a file, and we can do that as well in <code>config.ru</code> (based on <a href="http://www.gittr.com/index.php/archive/logging-with-sinatra-and-passenger-another-try/">this tip</a> from Chris Schneider). We&#x2019;ll also need to turn error raising back on, since by default Sinatra swallows errors in production mode:</p>
 
 
-<div class="wp_syntax"><div class="code"><pre class="ruby" style="font-family:monospace;"><span style="color:#CC0066; font-weight:bold;">require</span> <span style="color:#996600;">'rubygems'</span>
+<div class="wp_syntax"><div class="code"><pre class="ruby" style=""><span style="color:#CC0066; font-weight:bold;">require</span> <span style="color:#996600;">'rubygems'</span>
 <span style="color:#CC0066; font-weight:bold;">require</span> <span style="color:#996600;">'sinatra'</span>
 &nbsp;
 disable <span style="color:#ff3333; font-weight:bold;">:run</span>
@@ -95,7 +95,7 @@ run Sinatra.<span style="color:#9900CC;">application</span></pre></div></div>
 <p>I used Capistrano to deploy to Dreamhost, and based my Capfile of off John&#x2019;s directions <a href="http://railstips.org/2008/12/15/deploying-sinatra-on-dreamhost-with-passenger">here</a>. I modified it a bit to pull from github, and to create the <code>tmp/</code> and <code>log/</code> directories if they do not exist. Here is my Capfile:</p>
 
 
-<div class="wp_syntax"><div class="code"><pre class="ruby" style="font-family:monospace;"><span style="color:#008000; font-style:italic;">#-*-ruby-*-</span>
+<div class="wp_syntax"><div class="code"><pre class="ruby" style=""><span style="color:#008000; font-style:italic;">#-*-ruby-*-</span>
 <span style="color:#CC0066; font-weight:bold;">load</span> <span style="color:#996600;">'deploy'</span> <span style="color:#9966CC; font-weight:bold;">if</span> respond_to?<span style="color:#006600; font-weight:bold;">(</span><span style="color:#ff3333; font-weight:bold;">:namespace</span><span style="color:#006600; font-weight:bold;">)</span> <span style="color:#008000; font-style:italic;"># cap2 differentiator</span>
 &nbsp;
 default_run_options<span style="color:#006600; font-weight:bold;">[</span><span style="color:#ff3333; font-weight:bold;">:pty</span><span style="color:#006600; font-weight:bold;">]</span> = <span style="color:#0000FF; font-weight:bold;">true</span>
@@ -133,7 +133,7 @@ run <span style="color:#996600;">"touch #{current_path}/tmp/restart.txt"</span>
 <p>Since the Sinatra gem is not installed on Dreamhost, I put it in <code>vendor/</code> within the app. Since it is not a gem, it must be required with the full path to the base <code>.rb</code> file, both in <code>config.ru</code> and in the app file itself (<code>urlunwind.rb</code> in this case). Here is the final <code>config.ru</code>:</p>
 
 
-<div class="wp_syntax"><div class="code"><pre class="ruby" style="font-family:monospace;"><span style="color:#CC0066; font-weight:bold;">require</span> <span style="color:#996600;">'rubygems'</span>
+<div class="wp_syntax"><div class="code"><pre class="ruby" style=""><span style="color:#CC0066; font-weight:bold;">require</span> <span style="color:#996600;">'rubygems'</span>
 <span style="color:#CC0066; font-weight:bold;">require</span> <span style="color:#996600;">'vendor/sinatra/lib/sinatra.rb'</span>
 &nbsp;
 disable <span style="color:#ff3333; font-weight:bold;">:run</span>

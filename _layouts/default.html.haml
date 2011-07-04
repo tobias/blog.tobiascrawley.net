@@ -5,5 +5,29 @@ layout: base
   #left-column
     ~ content
   #right-column
+    - if page.previous_post || page.next_post
+      .post-navigation
+        .previous
+          - if page.previous_post
+            .label
+              previous
+            %a{:href => page.previous_post.url}= page.previous_post.title
+        .next
+          - if page.next_post
+            .label
+              next
+            %a{:href => page.next_post.url}= page.next_post.title
+
+    .bio
+      %h3
+        About
+      :markdown      
+        Hi! I'm Tobias Crawley. I'm a father and a software engineer. I work
+        on [TorqueBox](http://torquebox.org/) most if the time. I retweet 
+        others on [Twitter](http://twitter.com/tcrawley/), and fork 
+        others on [GitHub](https://github.com/tobias/).
+
+    %h3
+      A Cloud Made Of Tags
     = site.posts_tag_cloud
 
