@@ -24,7 +24,7 @@ like so:
 ## Use it now!
 
 I have an [instance running on Heroku](http://github-rss.heroku.com/) that you are free to use.
-As a [sample], here is the feed for github-rss itself. If you are using github-rss with a private repo, 
+Here is the feed for github-rss itself as a [sample]. If you are using github-rss with a private repo, 
 I recommend you run your own instance instead of using mine. It doesn't store your github [token], 
 but it does cache commit data in memcached, and do you trust me that much? 
  
