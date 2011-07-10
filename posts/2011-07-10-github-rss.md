@@ -6,7 +6,7 @@ tags: [github, rss, github-rss]
 ---
 
 The commit feeds provided by github only list the files that changed, and do not 
-include the diffs; [github-rss] fixes that. It is a simple web service that acts
+include the diffs - [github-rss] fixes that. It is a simple web service that acts
 as a proxy and uses the github API to fill in the diff for each commit in the feed.
 
 ## Usage
@@ -25,8 +25,8 @@ like so:
 
 I have an [instance running on Heroku](http://github-rss.heroku.com/) that you are free to use.
 As a [sample], here is the feed for github-rss itself. If you are using github-rss with a private repo, 
-I recommend you run your own instance instead of using mine. I'm not storing your github [token], 
-but do you trust me that much? 
+I recommend you run your own instance instead of using mine. It doesn't store your github [token], 
+but it does cache commit data in memcached, and do you trust me that much? 
  
 ## Problems
 
