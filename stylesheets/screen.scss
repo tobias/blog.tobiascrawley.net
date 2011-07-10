@@ -29,6 +29,10 @@ $link_hover_color: $bright_color;
 
 $post_padding: 20px;
 
+$width: 1024px;
+$sidebar_width: 300px;
+$sidebar_margin: 20px;
+
 body.bp {
     @include blueprint-typography(true);
     @include blueprint-utilities;
@@ -49,7 +53,8 @@ body.bp {
         color: $link_color;
     }
     #wrapper {
-        margin: 0 50px;
+        margin: 0 auto;
+        width: $width;
     }
     #header {
         padding-top: 30px;
@@ -113,15 +118,15 @@ img.aligncenter {
 }
 
 #columns {
-    padding-right: 330px;
+    //padding-right: 330px;
 
     #left-column {
       float: left;
+      width: $width - $sidebar_width - $sidebar_margin;
     }
     #right-column {
       float: right;
-      width: 300px;
-      margin-right: -330px;
+      width: $sidebar_width;
       h3 {
           border-bottom: 1px solid $bright_color;
           margin-bottom: 0.5em;
